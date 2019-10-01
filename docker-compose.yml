@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  etcdkeeper:
+    image: deltaprojects/etcdkeeper
+    container_name: etcdkeeper
+    ports:
+      - 8081:8080
+    networks:
+      - docker-net
+    external_links:
+      - etcd-singleton
+
+networks:
+  docker-net:
+    external: true
