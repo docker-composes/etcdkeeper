@@ -7,10 +7,10 @@ services:
     ports:
       - 8081:8080
     networks:
-      - docker-net
+      - local-net
     external_links:
       - etcd-singleton
 
 networks:
-  docker-net:
+  local-net:
     external: true
